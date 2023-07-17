@@ -21,7 +21,7 @@ let persondata = [
     Person(name: "Roberto", lastname: "Quiroga Llanos", dni: 72935381, imageName: "person.circle")
 ]
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     private let demoTableView: UITableView = {
         let tableView = UITableView()
@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         demoTableView.backgroundColor = .systemGreen
         demoTableView.dataSource = self
+        demoTableView.delegate = self
         demoTableView.register(UITableViewCell.self, forCellReuseIdentifier: "celdasPersona") // agregando identificador y pasando el table view cell
         demoTableView.register(PersonCustomViewCell.self, forCellReuseIdentifier: "PersonCustomViewCell") //pasarle la nueva clase creada
         view.addSubview(demoTableView)
@@ -59,6 +60,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = persondata[indexPath.row]
+        print("Hola, me presionaste:D -> \(model.name)")
     }
 
 
