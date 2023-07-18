@@ -36,7 +36,6 @@ class PersonCustomViewCell: UITableViewCell {
             personImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             personImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
             personImageView.widthAnchor.constraint(equalToConstant: 40),
-            personImageView.heightAnchor.constraint(equalToConstant: 40),
             
             personNameLabel.leadingAnchor.constraint(equalTo: personImageView.trailingAnchor, constant: 18),
             personNameLabel.centerYAnchor.constraint(equalTo: personImageView.centerYAnchor)

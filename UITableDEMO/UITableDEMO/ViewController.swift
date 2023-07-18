@@ -14,59 +14,22 @@ struct Person {
     let imageName: String
 }
 
-let persondata = [
-    Person(name: "Lucas", lastname: "Quiroga Llanos", dni: 72987381, imageName: "person.circle"),
-    Person(name: "Sebastian", lastname: "Llanos", dni: 73987381, imageName: "person.circle"),
-    Person(name: "Jaime", lastname: "Quiroga", dni: 75984381, imageName: "person.circle"),
-    Person(name: "Roberto", lastname: "Quiroga Llanos", dni: 72935381, imageName: "person.circle")
-]
-
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    private let demoTableView: UITableView = {
+class ViewController: UIViewController {
+    
+    private var datasource: PersonTableViewDataSource?
+    private var delegate: PersonTableViewDelegate?
+    
+    override func loadView() {
         let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        self.datasource = PersonTableViewDataSource(datasource: allmyPerson)
+        self.delegate = PersonTableViewDelegate()
+        tableView.dataSource = datasource
+        tableView.delegate = delegate
+        tableView.register(PersonCustomViewCell.self, forCellReuseIdentifier: "PersonCustomViewCell") //pasarle la nueva clase creada
         
-        demoTableView.backgroundColor = .systemGreen
-        demoTableView.dataSource = self
-        demoTableView.delegate = self
-        demoTableView.register(UITableViewCell.self, forCellReuseIdentifier: "celdasPersona") // agregando identificador y pasando el table view cell
-        demoTableView.register(PersonCustomViewCell.self, forCellReuseIdentifier: "PersonCustomViewCell") //pasarle la nueva clase creada
-        view.addSubview(demoTableView)
-        
-        NSLayoutConstraint.activate([
-            demoTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            demoTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            demoTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            demoTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        persondata.count //número de elementos que quemos mostrar
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCustomViewCell", for: indexPath) as! PersonCustomViewCell
-        
-        let model = persondata[indexPath.row] // obtenemos el primer registro
-        cell.configure(model: model)
-        
-        return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = persondata[indexPath.row]
-        print("Hola, me presionaste:D -> \(model.name)")
-    }
+        view = tableView
 
+    }
 
 }
 

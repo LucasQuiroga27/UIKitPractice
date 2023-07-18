@@ -14,6 +14,8 @@
 		04C9D56A2A64AECC004CFC2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C9D5692A64AECC004CFC2F /* Assets.xcassets */; };
 		04C9D56D2A64AECC004CFC2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C9D56B2A64AECC004CFC2F /* LaunchScreen.storyboard */; };
 		04C9D5752A64BF54004CFC2F /* PersonCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9D5742A64BF54004CFC2F /* PersonCustomViewCell.swift */; };
+		04C9D5772A664889004CFC2F /* PersonTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9D5762A664889004CFC2F /* PersonTableViewDataSource.swift */; };
+		04C9D5792A664A28004CFC2F /* PersonTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9D5782A664A28004CFC2F /* PersonTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		04C9D56C2A64AECC004CFC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C9D56E2A64AECC004CFC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C9D5742A64BF54004CFC2F /* PersonCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCustomViewCell.swift; sourceTree = "<group>"; };
+		04C9D5762A664889004CFC2F /* PersonTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewDataSource.swift; sourceTree = "<group>"; };
+		04C9D5782A664A28004CFC2F /* PersonTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				04C9D5622A64AEC9004CFC2F /* SceneDelegate.swift */,
 				04C9D5642A64AEC9004CFC2F /* ViewController.swift */,
 				04C9D5742A64BF54004CFC2F /* PersonCustomViewCell.swift */,
+				04C9D5762A664889004CFC2F /* PersonTableViewDataSource.swift */,
+				04C9D5782A664A28004CFC2F /* PersonTableViewDelegate.swift */,
 				04C9D5662A64AEC9004CFC2F /* Main.storyboard */,
 				04C9D5692A64AECC004CFC2F /* Assets.xcassets */,
 				04C9D56B2A64AECC004CFC2F /* LaunchScreen.storyboard */,
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C9D5652A64AEC9004CFC2F /* ViewController.swift in Sources */,
+				04C9D5792A664A28004CFC2F /* PersonTableViewDelegate.swift in Sources */,
 				04C9D5612A64AEC9004CFC2F /* AppDelegate.swift in Sources */,
+				04C9D5772A664889004CFC2F /* PersonTableViewDataSource.swift in Sources */,
 				04C9D5752A64BF54004CFC2F /* PersonCustomViewCell.swift in Sources */,
 				04C9D5632A64AEC9004CFC2F /* SceneDelegate.swift in Sources */,
 			);
