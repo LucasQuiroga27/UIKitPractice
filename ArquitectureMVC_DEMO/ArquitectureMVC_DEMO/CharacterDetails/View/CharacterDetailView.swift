@@ -49,7 +49,7 @@ class CharacterDetailView: UIView {
     
     func setupViews(){
         
-        backgroundColor = .systemGray4
+        backgroundColor = .white
         
         addSubview(characterImageView)
         addSubview(characterName)
@@ -59,7 +59,7 @@ class CharacterDetailView: UIView {
         NSLayoutConstraint.activate([
             
             characterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            characterImageView.topAnchor.constraint(equalTo: topAnchor, constant: 12),
+            characterImageView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 12),
             characterImageView.heightAnchor.constraint(equalToConstant: 250),
             characterImageView.widthAnchor.constraint(equalToConstant: 250),
             

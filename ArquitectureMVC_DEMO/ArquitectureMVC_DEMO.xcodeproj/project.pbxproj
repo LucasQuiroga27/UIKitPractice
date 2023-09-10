@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04882D7E2AAACDF8009BB7A9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04882D7D2AAACDF8009BB7A9 /* Coordinator.swift */; };
+		04882D802AAACF5B009BB7A9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04882D7F2AAACF5B009BB7A9 /* MainCoordinator.swift */; };
+		04882D822AAD275E009BB7A9 /* CharacterDetailPushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04882D812AAD275E009BB7A9 /* CharacterDetailPushCoordinator.swift */; };
+		04882D842AAD4388009BB7A9 /* CharacterDetailModalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04882D832AAD4388009BB7A9 /* CharacterDetailModalCoordinator.swift */; };
 		048A84402AA975B00020DE38 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 048A843F2AA975B00020DE38 /* Kingfisher */; };
 		048A84422AA9771B0020DE38 /* ListOfCharacterTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A84412AA9771B0020DE38 /* ListOfCharacterTableViewDelegate.swift */; };
 		048A84492AA981530020DE38 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A84482AA981530020DE38 /* CharacterDetailView.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04882D7D2AAACDF8009BB7A9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		04882D7F2AAACF5B009BB7A9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		04882D812AAD275E009BB7A9 /* CharacterDetailPushCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPushCoordinator.swift; sourceTree = "<group>"; };
+		04882D832AAD4388009BB7A9 /* CharacterDetailModalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailModalCoordinator.swift; sourceTree = "<group>"; };
 		048A84412AA9771B0020DE38 /* ListOfCharacterTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCharacterTableViewDelegate.swift; sourceTree = "<group>"; };
 		048A84482AA981530020DE38 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		048A844A2AA982490020DE38 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04882D7C2AAACDD9009BB7A9 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				04882D7D2AAACDF8009BB7A9 /* Coordinator.swift */,
+				04882D7F2AAACF5B009BB7A9 /* MainCoordinator.swift */,
+				04882D812AAD275E009BB7A9 /* CharacterDetailPushCoordinator.swift */,
+				04882D832AAD4388009BB7A9 /* CharacterDetailModalCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		048A84432AA980870020DE38 /* ListOfCharacters */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +138,11 @@
 		048E2B712AA8439F00783557 /* ArquitectureMVC_DEMO */ = {
 			isa = PBXGroup;
 			children = (
-				048A84442AA980F70020DE38 /* CharacterDetails */,
-				048A84432AA980870020DE38 /* ListOfCharacters */,
 				048E2B722AA8439F00783557 /* AppDelegate.swift */,
 				048E2B742AA8439F00783557 /* SceneDelegate.swift */,
+				04882D7C2AAACDD9009BB7A9 /* Coordinators */,
+				048A84442AA980F70020DE38 /* CharacterDetails */,
+				048A84432AA980870020DE38 /* ListOfCharacters */,
 				048E2B7B2AA843A100783557 /* Assets.xcassets */,
 				048E2B7D2AA843A100783557 /* LaunchScreen.storyboard */,
 				048E2B802AA843A100783557 /* Info.plist */,
@@ -238,7 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				048E2B962AA85C1B00783557 /* ListOfCharactersTableViewDataSource.swift in Sources */,
+				04882D842AAD4388009BB7A9 /* CharacterDetailModalCoordinator.swift in Sources */,
+				04882D802AAACF5B009BB7A9 /* MainCoordinator.swift in Sources */,
 				048A844B2AA982490020DE38 /* CharacterDetailViewController.swift in Sources */,
+				04882D7E2AAACDF8009BB7A9 /* Coordinator.swift in Sources */,
 				048A84492AA981530020DE38 /* CharacterDetailView.swift in Sources */,
 				048E2B8E2AA8467A00783557 /* CharacterModelResponse.swift in Sources */,
 				048E2B772AA8439F00783557 /* CharacterListViewController.swift in Sources */,
@@ -249,6 +272,7 @@
 				048E2B902AA846F800783557 /* CharacterModel.swift in Sources */,
 				048E2B752AA8439F00783557 /* SceneDelegate.swift in Sources */,
 				048E2B8C2AA844F100783557 /* APIClient.swift in Sources */,
+				04882D822AAD275E009BB7A9 /* CharacterDetailPushCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
